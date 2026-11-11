@@ -1,0 +1,7 @@
+node_modules
+dist
+*.log
+.vite
+# local media: your own recordings and exported demo audio (regenerate via "Load demo data")
+*.mp3
+demo-audio/

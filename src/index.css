@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body { @apply bg-ink-950 text-slate-200 antialiased font-sans text-sm; }
+  ::selection { background: #2dd4bf55; }
+  * { scrollbar-width: thin; scrollbar-color: #33415a transparent; }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-1.5 rounded-md border border-ink-500 bg-ink-700 px-3 py-1.5 text-xs font-medium text-slate-200 transition hover:bg-ink-600 disabled:opacity-40 disabled:pointer-events-none; }
+  .btn-primary { @apply border-accent-strong bg-accent text-ink-950 hover:bg-accent-strong; }
+  .btn-ghost { @apply border-transparent bg-transparent hover:bg-ink-700; }
+  .btn-danger { @apply border-red-900 bg-red-950 text-red-300 hover:bg-red-900; }
+  .btn-icon { @apply px-1.5 py-1.5; }
+  .input { @apply w-full rounded-md border border-ink-500 bg-ink-900 px-2.5 py-1.5 text-xs text-slate-100 placeholder:text-slate-500 focus:border-accent focus:outline-none; }
+  .card { @apply rounded-xl border border-ink-600 bg-ink-800; }
+  .chip { @apply inline-flex items-center gap-1 rounded-full border border-ink-500 bg-ink-700 px-2 py-0.5 text-[11px] text-slate-300; }
+  .label { @apply mb-1 block text-[11px] font-medium uppercase tracking-wide text-slate-500; }
+  .kbd { @apply rounded border border-ink-500 bg-ink-700 px-1.5 py-0.5 font-mono text-[10px] text-slate-300; }
+}
